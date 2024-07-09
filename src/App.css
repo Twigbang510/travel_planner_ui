@@ -1,0 +1,119 @@
+body {
+  font-family: "Inter";
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  font-family: "Inter";
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.calendar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar {
+  width: 100%;
+  border: none !important;
+}
+
+.react-calendar__viewContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.react-calendar__tile--active {
+  background-color: #ffdf80 !important;
+  color: black !important;
+}
+
+.react-calendar__tile--now {
+  background-color: black !important;
+  color: white !important;
+}
+
+.app__marker-icon {
+  position: relative;
+  display: block;
+  width: 33px;
+  /* Adjust size as needed */
+  height: 33px;
+  /* Adjust size as needed */
+  background-color: #ff6347;
+  /* Marker color */
+  border-radius: 50%;
+  /* Rounded shape for marker */
+  transform: translate(-50%, -50%);
+  /* Center the marker */
+  cursor: pointer;
+  /* Pointer cursor on hover */
+}
+
+.app__marker-icon::before {
+  content: '';
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #ff6347;
+  /* Same as marker color */
+}
+
+.app__marker-icon-start {
+  background-color: black;
+}
+
+.app__marker-icon-start::before {
+  border-top: 7px solid black;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.social-container .social-svg {
+  border-radius: 0% !important;
+}
